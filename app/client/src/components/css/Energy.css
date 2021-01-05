@@ -1,0 +1,90 @@
+.energy-page {
+    background: #27496d;
+}
+
+.main {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    user-select: none;
+}
+
+.instructions {
+    margin: 20px 0px;
+}
+
+.values {
+    display: flex;
+}
+
+.min {
+    position: relative;
+    left: -235px;
+}
+
+.max {
+    position: relative;
+    left: 235px;
+}
+
+.overline {
+    display: inline-flex
+}
+
+.page {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: -20px;
+}
+
+.examples {
+    display: flex;
+    vertical-align: middle;
+    width: 40%;
+}
+
+.example1 {
+    width: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.example2 {
+    width: 50%;
+    border-right-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin-left: 10px;
+    top: 15px;
+  }
+  
+.tooltip .tooltip-text {
+    left: 10px;
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+  
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+

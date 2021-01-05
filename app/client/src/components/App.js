@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/App.css';
 import MainScreen from './MainScreen.jsx';
+import SelectionScreen from './SelectionScreen.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,15 +10,12 @@ class App extends React.Component {
     const params = this.getHashParams();
     this.state = {
       loggedIn: params.access_token ? true : false,
-      response: ''
+      response: '',
+      access: params.access_token
     }
+    this.createPlaylist = this.createPlaylist.bind(this);
   }
 
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
 
   getHashParams() {
     var hashParams = {};
@@ -28,12 +27,20 @@ class App extends React.Component {
     return hashParams;
   }
 
-  callApi = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
+  // callApi = async () => {
+  //   const response = await fetch('/api/hello');
+  //   const body = await response.json();
+  //   if (response.status !== 200) throw Error(body.message);
 
-    return body;
+  //   return body;
+  // }
+
+  createPlaylist() {
+    axios.post('/api/playlist', {
+      access: this.state.access
+    })
+      .then(() => { console.log('success') })
+      .catch(() => { console.log('error') })
   }
 
   render() {
@@ -45,8 +52,8 @@ class App extends React.Component {
       );
     } else {
       return (
-        <div>
-          {this.state.response}
+        <div className="App">
+          <SelectionScreen params={this.state.access} createPlaylist={this.createPlaylist}/>
         </div>
       )
     }

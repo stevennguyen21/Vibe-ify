@@ -1,0 +1,29 @@
+.genre {
+    height: 2rem;
+    padding: 0px, 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.selectedGenre {
+    height: 2rem;
+    padding: 0px, 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5rem;
+    background-color: white;
+    color: #2c3134;
+}
