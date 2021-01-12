@@ -1,0 +1,1 @@
+An application intended to give a finer control on the recommendations a user receives from Spotify. Allows user to set a range of values based on the parameter they select, examples being BPM, mood, energy, etc., and several genres which they then receive songs based on those parameters from the spotify API.
