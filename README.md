@@ -6,7 +6,7 @@ This application uses the Spotify API and creates a user interface for users to 
 ### Built With
 
 * [React](https://reactjs.org)
-* [Express](expressjs.org)
+* [Express](http://expressjs.com/)
 * [Axios](https://www.npmjs.com/package/axios)
 
 
